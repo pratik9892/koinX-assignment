@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const Navbar = () => {
 
-    const [isMobile,setIsMobile] = useState(true)
+    const [isMobile,setIsMobile] = useState(false)
 
     const toggleIsMobile = () => {
         setIsMobile(prev => !prev)
