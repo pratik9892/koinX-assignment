@@ -10,7 +10,7 @@ import { useFetch } from '../hooks/useFetch'
 
 const CoinAdditionalInfo = ({coinId,TrendingData}) => {
 
-  console.log(TrendingData);
+
   const {data, loading} = useFetch(`/coins/${coinId}`) 
 
   

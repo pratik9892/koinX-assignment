@@ -1,7 +1,15 @@
 import React from 'react'
 import Button from './Button/Button'
+import { useState } from 'react'
 
 const Navbar = () => {
+
+    const [isMobile,setIsMobile] = useState(true)
+
+    const toggleIsMobile = () => {
+        setIsMobile(prev => !prev)
+    }
+
   return (
     <nav className='md:h-[80px] h-[64px] w-full  flex flex-row items-center justify-between md:px-20 px-10 bg-[#FFFFFF]'>
         <div className="logo">
@@ -19,13 +27,30 @@ const Navbar = () => {
                 <Button className={"text-white px-4 py-3 bg-gradient-to-r from-[#2870EA] to-[#1B4AEF] rounded-lg font-semibold font-inter "} text={"Get Started"}/>
             </div>
         </div>
-        <div className='md:hidden'>
+        {!isMobile && <div className='md:hidden transition-all' onClick={toggleIsMobile}>
             <button className='md:hidden'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
-        </div>
+        </div>}
+        {isMobile && <div className="mobile-nav-items  md:hidden  transition-all" onClick={toggleIsMobile}>
+            <button>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+<path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path>
+</svg>
+            </button>
+        </div>}
+        {isMobile && <div className="navItems  items-center  md:hidden absolute top-[70px] w-[200px] bg-gray-200 py-10 rounded-xl right-[10px]">
+            <div className='navItem'>
+                <ul className='flex gap-4 items-center flex-col font-semibold font-inter cursor-pointer'>
+                    <li>Crypto Tax</li>
+                    <li>Free Tools</li>
+                    <li>Resource Center</li>
+                    <Button className={"text-white px-4 py-3 bg-gradient-to-r from-[#2870EA] to-[#1B4AEF] rounded-lg font-semibold font-inter "} text={"Get Started"}/>
+                </ul>
+            </div>
+        </div>}
     </nav>
   )
 }

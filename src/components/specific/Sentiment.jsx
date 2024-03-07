@@ -24,7 +24,7 @@ const Sentiment = () => {
     <div className='sentiments md:w-[881px] md:h-[632px]  px-[10px] py-4  md:p-5 h-[480px] w-[384px] overflow-hidden rounded-lg font-inter flex flex-col gap-4 bg-[#FFFFFF] my-10'>
         <TabHeading title={"Sentiment"}/>
         <h2 className='text-lg font-semibold text-[#44475B] overflow-hidden'>Key Events</h2>
-        <div className='overflow-x-scroll no-scrollbar'>
+        <div className='overflow-x-scroll no-scrollbar '>
         <div className='py-4 flex items-center gap-8 overflow-hidden md:w-[926px] md:h-[204px]'>
             <InfoCard desc={"Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim."} title={"Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt."}/>
             <InfoCard desc={"Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim."} title={"Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt."}/>
