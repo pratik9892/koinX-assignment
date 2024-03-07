@@ -37,7 +37,7 @@ const TrendingCoins = ({ title, data, loading }) => {
                       {item?.item?.symbol}
                     </h3>
                     <div
-                      className={` md:text-base text-center md:rounded-md py-[0.5px] px-1 w-[36px] h-[15px] text-[8px] md:w-[80px] md:h-[25px]
+                      className={` md:text-base text-center md:rounded-md py-[0.5px] px-1 rounded-sm text-[8px] md:w-[80px] md:h-[25px]
                         ${
                           item?.item?.data?.price_change_percentage_24h?.usd < 0
                             ? "bg-red-500 bg-opacity-50"
