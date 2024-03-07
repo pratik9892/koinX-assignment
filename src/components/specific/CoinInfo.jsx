@@ -12,7 +12,7 @@ const CoinInfo = ({data,loading}) => {
                 {loading ? <div className='w-[36px] h-[36px] bg-gray-300 animate-pulse rounded-xl'></div> : <img src={`${data?.image?.large}`} alt="" className='w-[36px] h-[36px] object-cover '/>}
                 {loading ? <div className='w-[200px] h-[20px] bg-gray-300 animate-pulse rounded-xl'></div> : <TabHeading title={data?.name}/>}
                 {loading ? <div className='w-[80px] h-[40px] bg-gray-300 animate-pulse rounded-xl'></div> : <h3 className='font-semibold text-base text-[#5D667B] leading-5'>{data?.symbol?.toUpperCase()}</h3>}
-                {loading ? <div className='w-[80px] h-[40px] bg-gray-300 animate-pulse rounded-xl'></div> : <div className='w-[80px] h-[40px] rounded-lg border-[1px] border-[#808A9D] bg-[#808A9D] flex items-center justify-center md:ml-10 ml-5'>
+                {loading ? <div className='w-[80px] h-[40px] bg-gray-300 animate-pulse rounded-xl'></div> : <div className='w-[100px] h-[40px] rounded-lg border-[1px] border-[#808A9D] bg-[#808A9D] flex items-center justify-center md:ml-10 ml-5'>
                     <p className='font-medium text-base text-[#FFFFFF]'>{`Rank #${data?.market_cap_rank}`}</p>
                 </div>}
             </div>

@@ -1,7 +1,11 @@
 import React from "react";
 import TabHeading from "../Heading/TabHeading";
+import { useNavigate } from "react-router-dom";
 
 const TrendingCoins = ({ title, data, loading }) => {
+
+  const navigate = useNavigate();
+
   const skeleton = () => {
     return (
       <div className="md:w-[252px] md:h-[160px] rounded-2xl h-[158.85px] w-[101.78px] animate-pulse bg-gray-200">
@@ -25,8 +29,14 @@ const TrendingCoins = ({ title, data, loading }) => {
         ) : (
           <React.Fragment>
             {data?.map((item) => {
+              console.log(item);
               return (
-                <div className="md:w-[252px] md:h-[160px] h-[100.78px] w-[165.26px] md:p-4 py-[8px] px-[4px] border-2 border-[#E3E3E3] rounded-lg flex items-start flex-col gap-1">
+                <div 
+                onClick={() => {
+                  navigate(`/${item?.item?.slug}`)
+                  window.scrollTo(0, 0);
+                }}
+                className="md:w-[252px] cursor-pointer md:h-[160px] h-[100.78px] w-[165.26px] md:p-4 py-[8px] px-[4px] border-2 border-[#E3E3E3] rounded-lg flex items-start flex-col gap-1">
                   <div className="coin-info md:h-[38px] md:w-[218px] w-[137.57px] h-[23.97px]  flex items-center gap-2">
                     <img
                       src={item?.item?.large}
