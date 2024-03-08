@@ -25,7 +25,7 @@ const CryptocurrInfo = () => {
         </div>
         <div className='w-full h-[628px]  md:flex items-center flex-col bg-[#FFFFFF] justify-center hidden '>
           <TrendingCoins title={"You May Also Like"} data={data?.coins} loading={loading}/>
-          <TrendingCoins title={"Trending Coins"} data={data?.coins} loading={loading}/>
+          <TrendingCoins title={"Trending Coins"} data={data?.coins?.slice().reverse()} loading={loading}/>
         </div>
     </div>
   )

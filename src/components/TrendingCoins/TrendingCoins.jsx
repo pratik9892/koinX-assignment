@@ -1,6 +1,7 @@
 import React from "react";
 import TabHeading from "../Heading/TabHeading";
 import { useNavigate } from "react-router-dom";
+import imagenotAvailable from "../../assets/imagenotaval.png"
 
 const TrendingCoins = ({ title, data, loading }) => {
 
@@ -70,7 +71,7 @@ const TrendingCoins = ({ title, data, loading }) => {
                   </div>
                   <div className="coin-chart w-[125.85px] h-[37.75px] md:w-[200px] md:h-[60px]">
                     <img
-                      src={item?.item?.data?.sparkline || ""}
+                      src={item?.item?.data?.sparkline || imagenotAvailable}
                       alt=""
                       className="w-full h-full object-contain"
                     />
