@@ -30,7 +30,6 @@ const TrendingCoins = ({ title, data, loading }) => {
         ) : (
           <React.Fragment>
             {data?.map((item) => {
-              console.log(item);
               return (
                 <div 
                 onClick={() => {
