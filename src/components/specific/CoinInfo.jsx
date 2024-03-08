@@ -19,8 +19,8 @@ const CoinInfo = ({data,loading}) => {
             <div className="price h-[66px] w-[568.72px] flex items-start flex-col">
                 <div className='price-curr h-[39px] flex items-center gap-8'>
                     {loading ? <div className='w-[100px] h-[40px] bg-gray-300 animate-pulse rounded-xl'></div> : <h1 className="price font-semibold text-3xl price-usd">{`$${data?.market_data?.current_price?.usd.toLocaleString("en-US")}`}</h1>}
-                    <div className='h-[40px] w-[150px] flex items-center gap-4'>
-                    {loading ? <div className='w-[39px] h-[27px] bg-gray-300 animate-pulse rounded-xl'></div> : <div className={`percent-up-down h-[28px] w-[100px] rounded-md flex items-center justify-center ${data?.market_data?.price_change_percentage_24h > 0 ? "bg-[#EBF9F4]" : "bg-[#f9eeeb]"}`}>
+                    <div className='h-[36px] w-[150px] flex items-center gap-4'>
+                    {loading ? <div className='w-[39px] h-[27px] bg-gray-300 animate-pulse rounded-xl'></div> : <div className={`percent-up-down h-[28px] w-[84px] rounded-md flex items-center justify-center ${data?.market_data?.price_change_percentage_24h > 0 ? "bg-[#EBF9F4]" : "bg-[#f9eeeb]"}`}>
                         <p className={`font-medium text-base  ${data?.market_data?.price_change_percentage_24h > 0 ? "text-[#14B079]" : "text-[#f07b7b]"}`}>{`${data?.market_data?.price_change_percentage_24h > 0 ?  "▲ " : "▼ "}${data?.market_data?.price_change_percentage_24h?.toFixed(2)}%`}</p>
                     </div>}
                     <div className='w-[39px] h-[27px]'>
